@@ -249,3 +249,9 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   [data-snt-reveal] { opacity:1!important; transform:none!important; transition:none!important; }
 }
+
+/* ── Viewport-fit sections (desktop) ── */
+@media(min-width:861px){
+  .vh-fit{min-height:100vh;display:flex;align-items:center;}
+  .vh-fit>*{width:100%;}
+}
