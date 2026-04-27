@@ -184,7 +184,7 @@ a { text-decoration: none; color: inherit; }
 /* ── FOOTER — Korean site style ── */
 .snt-footer {
   background: #0d1b2a;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   padding: 0;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -200,42 +200,42 @@ a { text-decoration: none; color: inherit; }
 .snt-footer__brand img { height: 28px; margin-bottom: 16px; opacity: .85; }
 .snt-footer__logo-name { display: none; }
 .snt-footer__logo-tag {
-  font-size: 11px; color: rgba(255,255,255,.3);
+  font-size: 11px; color: rgba(255,255,255,.55);
   letter-spacing: .08em; margin-bottom: 14px;
 }
-.snt-footer__desc { font-size: 12.5px; line-height: 1.75; color: rgba(255,255,255,.4); }
+.snt-footer__desc { font-size: 13.5px; line-height: 1.75; color: rgba(255,255,255,.6); }
 .snt-footer__col-title {
-  font-size: 10px; font-weight: 700; letter-spacing: .2em;
+  font-size: 11px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase;
   color: #00a0ea; margin-bottom: 16px;
 }
 .snt-footer__links { display: flex; flex-direction: column; gap: 10px; }
 .snt-footer__links a {
-  font-size: 13px; color: rgba(255,255,255,.45);
+  font-size: 14px; color: rgba(255,255,255,.65);
   transition: color .2s, padding-left .2s; letter-spacing: .01em;
 }
 .snt-footer__links a:hover { color: #fff; padding-left: 4px; }
 .snt-footer__contact-block { display: flex; flex-direction: column; gap: 12px; }
 .snt-footer__contact-item { display: flex; gap: 10px; align-items: flex-start; }
 .snt-footer__contact-label {
-  font-size: 9px; font-weight: 700; letter-spacing: .15em;
-  color: rgba(255,255,255,.25); text-transform: uppercase;
+  font-size: 10px; font-weight: 700; letter-spacing: .15em;
+  color: rgba(255,255,255,.5); text-transform: uppercase;
   min-width: 52px; padding-top: 2px;
 }
-.snt-footer__contact-val { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.6; }
-.snt-footer__contact-val a { color: rgba(255,255,255,.55); transition: color .2s; }
+.snt-footer__contact-val { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.6; }
+.snt-footer__contact-val a { color: rgba(255,255,255,.7); transition: color .2s; }
 .snt-footer__contact-val a:hover { color: #00a0ea; }
 .snt-footer__contact { display: none; }
 .snt-footer__bottom {
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(255,255,255,.12);
   padding: 20px clamp(20px,4vw,48px);
   display: flex; align-items: center;
   justify-content: space-between; flex-wrap: wrap; gap: 12px;
 }
-.snt-footer__copy { font-size: 11px; color: rgba(255,255,255,.25); letter-spacing: .02em; }
+.snt-footer__copy { font-size: 12px; color: rgba(255,255,255,.45); letter-spacing: .02em; }
 .snt-footer__policy { display: flex; gap: 20px; }
-.snt-footer__policy a { font-size: 11px; color: rgba(255,255,255,.25); transition: color .2s; }
-.snt-footer__policy a:hover { color: rgba(255,255,255,.6); }
+.snt-footer__policy a { font-size: 12px; color: rgba(255,255,255,.45); transition: color .2s; }
+.snt-footer__policy a:hover { color: rgba(255,255,255,.85); }
 
 /* ── REVEAL ANIMATION ── */
 [data-snt-reveal] {
