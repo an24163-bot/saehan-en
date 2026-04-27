@@ -183,50 +183,59 @@ a { text-decoration: none; color: inherit; }
 
 /* ── FOOTER — Korean site style ── */
 .snt-footer {
-  background: var(--snt-navy);
-  color: rgba(255,255,255,0.6);
-  padding: 52px clamp(20px,4vw,48px) 32px;
+  background: #0d1b2a;
+  color: rgba(255,255,255,0.5);
+  padding: 0;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 .snt-footer__inner { max-width: 1280px; margin: 0 auto; }
+.snt-footer__accent { height: 3px; background: linear-gradient(90deg, #004ea1, #00a0ea, #004ea1); }
+.snt-footer__body { padding: 56px clamp(20px,4vw,48px) 28px; }
 .snt-footer__top {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 48px; margin-bottom: 36px;
+  grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+  gap: 40px; margin-bottom: 40px;
 }
-.snt-footer__logo-name {
-  font-size: 17px; font-weight: 800; color: #fff;
-  letter-spacing: -.02em; margin-bottom: 4px;
-}
+.snt-footer__brand img { height: 28px; margin-bottom: 16px; opacity: .85; }
+.snt-footer__logo-name { display: none; }
 .snt-footer__logo-tag {
-  font-size: 11px; color: rgba(255,255,255,.38);
-  letter-spacing: .08em; margin-bottom: 16px;
+  font-size: 11px; color: rgba(255,255,255,.3);
+  letter-spacing: .08em; margin-bottom: 14px;
 }
-.snt-footer__desc { font-size: 13px; line-height: 1.7; }
+.snt-footer__desc { font-size: 12.5px; line-height: 1.75; color: rgba(255,255,255,.4); }
 .snt-footer__col-title {
-  font-size: 11px; font-weight: 700; letter-spacing: .14em;
+  font-size: 10px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.32); margin-bottom: 14px;
+  color: #00a0ea; margin-bottom: 16px;
 }
-.snt-footer__links { display: flex; flex-direction: column; gap: 9px; }
+.snt-footer__links { display: flex; flex-direction: column; gap: 10px; }
 .snt-footer__links a {
-  font-size: 13.5px; color: rgba(255,255,255,.6);
-  transition: color .15s;
+  font-size: 13px; color: rgba(255,255,255,.45);
+  transition: color .2s, padding-left .2s; letter-spacing: .01em;
 }
-.snt-footer__links a:hover { color: #fff; }
-.snt-footer__contact { font-size: 13px; margin-bottom: 8px; line-height: 1.6; }
-.snt-footer__contact a { color: rgba(255,255,255,.6); }
+.snt-footer__links a:hover { color: #fff; padding-left: 4px; }
+.snt-footer__contact-block { display: flex; flex-direction: column; gap: 12px; }
+.snt-footer__contact-item { display: flex; gap: 10px; align-items: flex-start; }
+.snt-footer__contact-label {
+  font-size: 9px; font-weight: 700; letter-spacing: .15em;
+  color: rgba(255,255,255,.25); text-transform: uppercase;
+  min-width: 52px; padding-top: 2px;
+}
+.snt-footer__contact-val { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.6; }
+.snt-footer__contact-val a { color: rgba(255,255,255,.55); transition: color .2s; }
+.snt-footer__contact-val a:hover { color: #00a0ea; }
+.snt-footer__contact { display: none; }
 .snt-footer__bottom {
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 20px clamp(20px,4vw,48px);
   display: flex; align-items: center;
   justify-content: space-between; flex-wrap: wrap; gap: 12px;
 }
-.snt-footer__copy { font-size: 12px; }
-.snt-footer__policy { display: flex; gap: 18px; }
-.snt-footer__policy a { font-size: 12px; color: rgba(255,255,255,.38); }
-.snt-footer__policy a:hover { color: rgba(255,255,255,.7); }
+.snt-footer__copy { font-size: 11px; color: rgba(255,255,255,.25); letter-spacing: .02em; }
+.snt-footer__policy { display: flex; gap: 20px; }
+.snt-footer__policy a { font-size: 11px; color: rgba(255,255,255,.25); transition: color .2s; }
+.snt-footer__policy a:hover { color: rgba(255,255,255,.6); }
 
 /* ── REVEAL ANIMATION ── */
 [data-snt-reveal] {
@@ -240,11 +249,11 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .snt-nav__menu, .snt-nav__right { display: none; }
   .snt-nav__hamburger { display: flex; }
-  .snt-footer__top { grid-template-columns: 1fr 1fr; }
+  .snt-footer__top { grid-template-columns: 1fr 1fr; gap: 32px; }
   .snt-footer__top > :first-child { grid-column: 1/-1; }
 }
 @media (max-width: 600px) {
-  .snt-footer__top { grid-template-columns: 1fr; }
+  .snt-footer__top { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (prefers-reduced-motion: reduce) {
   [data-snt-reveal] { opacity:1!important; transform:none!important; transition:none!important; }
