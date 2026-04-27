@@ -22,9 +22,9 @@ a { text-decoration: none; color: inherit; }
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --snt-blue:      #1a6dff;
-  --snt-blue-deep: #0b3d8f;
-  --snt-blue-soft: #eaf1ff;
+  --snt-blue:      #004ea1;
+  --snt-blue-deep: #003478;
+  --snt-blue-soft: #e8f1f8;
   --snt-navy:      #0f1a33;
   --snt-text:      #1b2333;
   --snt-muted:     #6a7589;
