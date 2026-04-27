@@ -146,257 +146,190 @@
 <style>@media(max-width:900px){[style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important;}}@media(max-width:520px){[style*="grid-template-columns:repeat(4"]{grid-template-columns:1fr!important;}}</style>
 
 <!-- Global Presence -->
-<section class="gp-section">
-  <div class="gp-inner">
-    <div class="gp-head" data-snt-reveal>
-      <span class="gp-eyebrow">GLOBAL PRESENCE</span>
-      <h2 class="gp-title">Exported <span class="gp-accent">Worldwide</span></h2>
-      <p class="gp-desc">Our precision machine tools operate in semiconductor fabs, research institutes, and manufacturing facilities across the globe.</p>
+<section class="gp">
+  <div class="gp__inner">
+    <div class="gp__head" data-snt-reveal>
+      <h2 class="gp__title">Exported <em>Worldwide</em></h2>
+      <p class="gp__desc">Our precision machine tools operate in semiconductor fabs, research institutes,<br>and manufacturing facilities across the globe.</p>
     </div>
 
-    <div class="gp-map-wrap" data-snt-reveal>
-      <svg class="gp-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+    <div class="gp__map-wrap" data-snt-reveal>
+      <svg class="gp__svg" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <radialGradient id="gpGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a6dff" stop-opacity=".7"/><stop offset="100%" stop-color="#1a6dff" stop-opacity="0"/></radialGradient>
-          <filter id="gpBlur"><feGaussianBlur stdDeviation="2"/></filter>
-          <!-- Shooting star gradient -->
-          <linearGradient id="shootA" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#4d9dff" stop-opacity="0"/>
-            <stop offset="50%" stop-color="#4d9dff" stop-opacity="1"/>
-            <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
-          </linearGradient>
+          <radialGradient id="hqG"><stop offset="0%" stop-color="#1a6dff" stop-opacity=".8"/><stop offset="100%" stop-color="#1a6dff" stop-opacity="0"/></radialGradient>
+          <linearGradient id="lineG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4d9dff" stop-opacity="0"/><stop offset="40%" stop-color="#fff" stop-opacity=".9"/><stop offset="100%" stop-color="#fff" stop-opacity="1"/></linearGradient>
         </defs>
 
-        <!-- Continent fills (simplified polygons, ~15% white on dark navy) -->
-        <g fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.06)" stroke-width=".5">
+        <!-- ═══ CONTINENTS (filled, ~15% opacity) ═══ -->
+        <g fill="rgba(100,140,200,.15)" stroke="rgba(140,170,220,.08)" stroke-width="1">
           <!-- North America -->
-          <path d="M120,60 L160,45 L200,50 L240,55 L260,70 L270,90 L260,120 L240,150 L230,170 L220,190 L200,200 L190,190 L170,180 L155,170 L140,165 L130,160 L120,145 L110,130 L100,110 L95,90 L100,75 Z"/>
-          <!-- Central America -->
-          <path d="M190,190 L200,200 L210,215 L215,225 L220,235 L215,240 L210,238 L205,230 L195,220 L190,210 Z"/>
+          <path d="M80,80 C90,60 130,40 180,35 C220,32 260,38 290,50 C310,58 325,72 335,90 C340,102 338,118 330,135 C322,150 310,168 295,182 C280,195 270,210 262,225 C256,236 248,242 238,238 C225,232 212,222 200,215 C188,208 175,202 162,198 C148,194 135,192 125,186 C115,180 108,170 100,158 C92,146 86,132 82,118 C78,104 76,92 80,80Z"/>
+          <!-- Greenland -->
+          <path d="M300,25 C315,20 335,22 345,30 C350,36 348,45 342,50 C335,55 322,54 312,48 C305,43 298,35 300,25Z"/>
           <!-- South America -->
-          <path d="M220,240 L240,235 L260,245 L275,260 L280,280 L278,300 L275,320 L268,340 L260,360 L250,375 L242,385 L238,380 L235,360 L232,340 L230,320 L228,300 L225,280 L222,265 Z"/>
+          <path d="M265,260 C275,252 290,248 305,250 C318,253 328,262 335,275 C340,288 342,305 340,322 C338,338 332,355 325,370 C318,385 308,398 298,408 C290,415 282,420 276,418 C270,415 266,405 262,392 C258,378 255,362 253,345 C251,328 250,310 250,292 C250,275 255,265 265,260Z"/>
           <!-- Europe -->
-          <path d="M440,55 L455,50 L470,52 L485,55 L500,60 L510,65 L505,80 L500,95 L495,105 L490,115 L480,120 L470,118 L460,110 L450,105 L442,100 L438,90 L435,80 L432,70 Z"/>
-          <!-- UK -->
-          <path d="M428,60 L432,55 L436,58 L435,68 L430,70 Z"/>
+          <path d="M520,60 C535,52 555,48 575,50 C590,52 605,58 618,68 C628,76 632,88 628,100 C624,112 615,122 605,130 C595,136 582,138 570,135 C558,132 548,125 538,118 C530,112 524,104 520,95 C516,86 515,74 520,60Z"/>
+          <!-- British Isles -->
+          <path d="M505,68 C510,62 518,60 522,64 C524,68 522,75 518,78 C514,80 508,78 506,74Z"/>
+          <!-- Scandinavia -->
+          <path d="M560,32 C568,28 578,30 582,38 C585,45 580,55 574,58 C568,60 560,55 558,48 C556,42 556,36 560,32Z"/>
           <!-- Africa -->
-          <path d="M460,160 L480,155 L500,160 L515,170 L525,185 L530,200 L530,220 L528,240 L522,260 L515,275 L505,290 L495,300 L485,305 L478,300 L470,285 L465,270 L460,250 L455,230 L452,210 L450,190 L455,175 Z"/>
+          <path d="M540,185 C555,178 575,175 592,180 C608,185 620,195 628,210 C635,225 638,242 638,260 C638,278 635,298 628,315 C620,332 610,348 598,360 C588,370 576,376 565,375 C554,372 545,362 538,350 C532,338 528,322 525,305 C522,288 520,270 520,252 C520,235 524,218 530,202 C534,192 536,188 540,185Z"/>
           <!-- Middle East -->
-          <path d="M520,130 L540,125 L555,130 L565,140 L560,155 L548,158 L535,155 L525,148 L518,140 Z"/>
-          <!-- India -->
-          <path d="M600,160 L615,155 L625,165 L630,180 L628,200 L620,215 L612,225 L605,218 L598,205 L595,190 L592,175 Z"/>
-          <!-- China + East Asia -->
-          <path d="M630,80 L660,75 L690,78 L720,85 L740,95 L750,110 L748,125 L740,140 L730,150 L720,155 L700,158 L680,155 L665,148 L650,140 L640,130 L630,115 L625,100 Z"/>
+          <path d="M620,140 C638,135 658,138 672,148 C682,155 686,168 680,178 C674,188 662,192 650,190 C638,188 628,180 622,170 C616,160 615,148 620,140Z"/>
+          <!-- India / South Asia -->
+          <path d="M710,185 C725,178 740,180 750,190 C758,200 760,215 755,228 C750,240 740,250 730,256 C720,260 710,258 702,250 C695,242 692,230 693,218 C694,206 700,194 710,185Z"/>
+          <!-- Russia / Central Asia -->
+          <path d="M590,28 C620,22 660,18 700,16 C740,15 780,18 820,24 C855,30 885,38 905,50 C920,58 925,68 918,76 C908,85 892,88 875,86 C855,84 835,78 815,75 C795,72 775,72 755,75 C735,78 715,82 695,80 C675,78 655,72 635,66 C618,60 605,52 598,44 C592,38 588,32 590,28Z"/>
+          <!-- China / East Asia -->
+          <path d="M760,80 C790,72 825,70 855,75 C880,80 900,90 912,105 C920,116 922,130 916,142 C908,155 895,165 880,170 C865,175 848,175 830,172 C812,168 795,160 780,150 C768,142 758,130 752,118 C748,106 748,92 760,80Z"/>
           <!-- Southeast Asia -->
-          <path d="M680,195 L695,190 L710,195 L718,205 L720,215 L712,225 L700,228 L690,225 L682,218 L678,210 Z"/>
+          <path d="M820,225 C838,218 858,220 870,230 C878,238 880,250 876,260 C870,270 860,275 848,274 C836,272 825,266 818,256 C812,246 812,234 820,225Z"/>
           <!-- Japan -->
-          <path d="M780,100 L785,108 L788,120 L786,132 L782,140 L778,135 L776,122 L775,110 Z"/>
+          <path d="M940,95 C945,88 952,86 956,92 C960,100 958,115 955,128 C952,138 948,145 943,142 C938,138 936,128 936,118 C936,108 937,100 940,95Z"/>
           <!-- Australia -->
-          <path d="M740,310 L760,300 L780,305 L800,310 L810,320 L808,335 L800,345 L785,350 L770,348 L755,340 L745,330 L738,320 Z"/>
-          <!-- Russia/Siberia -->
-          <path d="M500,40 L540,35 L580,30 L620,28 L660,30 L700,35 L730,40 L750,48 L760,58 L755,68 L740,75 L720,78 L690,72 L660,68 L630,72 L600,68 L570,60 L540,55 L510,50 Z"/>
+          <path d="M885,365 C905,355 930,350 955,355 C975,360 990,370 998,385 C1003,398 1000,412 990,422 C978,432 962,436 945,435 C928,433 912,426 900,416 C890,408 884,396 882,385 C881,375 882,368 885,365Z"/>
+          <!-- Indonesia/Philippines -->
+          <path d="M850,280 C860,276 872,278 880,285 C885,290 884,298 878,302 C872,305 862,304 855,298 C850,293 848,285 850,280Z"/>
+          <path d="M895,285 C902,282 910,284 914,290 C916,295 912,300 906,302 C900,303 894,298 893,292Z"/>
         </g>
 
-        <!-- Connection lines from Korea (animated) -->
-        <!-- Korea → USA -->
-        <path class="gp-line" d="M770,130 Q550,30 210,155" fill="none" stroke="rgba(77,157,255,.2)" stroke-width="1.5"/>
-        <path class="gp-line-glow" d="M770,130 Q550,30 210,155" fill="none" stroke="url(#shootA)" stroke-width="2" stroke-dasharray="30 570" stroke-dashoffset="0">
-          <animate attributeName="stroke-dashoffset" from="0" to="-600" dur="3s" repeatCount="indefinite"/>
-        </path>
+        <!-- ═══ CONNECTION LINES (Korea → countries) ═══ -->
+        <g>
+          <!-- Korea → USA (long arc) -->
+          <path d="M920,125 Q600,10 245,175" fill="none" stroke="rgba(77,157,255,.15)" stroke-width="2"/>
+          <path d="M920,125 Q600,10 245,175" fill="none" stroke="url(#lineG)" stroke-width="2.5" stroke-dasharray="40 700">
+            <animate attributeName="stroke-dashoffset" from="0" to="-740" dur="3.5s" repeatCount="indefinite"/>
+          </path>
 
-        <!-- Korea → China -->
-        <path class="gp-line" d="M770,130 Q730,125 685,140" fill="none" stroke="rgba(77,157,255,.2)" stroke-width="1.5"/>
-        <path class="gp-line-glow" d="M770,130 Q730,125 685,140" fill="none" stroke="url(#shootA)" stroke-width="2" stroke-dasharray="20 180" stroke-dashoffset="0">
-          <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="2s" repeatCount="indefinite"/>
-        </path>
+          <!-- Korea → China -->
+          <path d="M920,125 Q890,110 845,135" fill="none" stroke="rgba(77,157,255,.15)" stroke-width="2"/>
+          <path d="M920,125 Q890,110 845,135" fill="none" stroke="url(#lineG)" stroke-width="2.5" stroke-dasharray="25 175">
+            <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="1.8s" repeatCount="indefinite"/>
+          </path>
 
-        <!-- Korea → Vietnam -->
-        <path class="gp-line" d="M770,130 Q740,170 700,210" fill="none" stroke="rgba(77,157,255,.2)" stroke-width="1.5"/>
-        <path class="gp-line-glow" d="M770,130 Q740,170 700,210" fill="none" stroke="url(#shootA)" stroke-width="2" stroke-dasharray="20 200" stroke-dashoffset="0">
-          <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="2.2s" repeatCount="indefinite"/>
-        </path>
+          <!-- Korea → Vietnam -->
+          <path d="M920,125 Q895,200 838,248" fill="none" stroke="rgba(77,157,255,.15)" stroke-width="2"/>
+          <path d="M920,125 Q895,200 838,248" fill="none" stroke="url(#lineG)" stroke-width="2.5" stroke-dasharray="25 225">
+            <animate attributeName="stroke-dashoffset" from="0" to="-250" dur="2.2s" repeatCount="indefinite"/>
+          </path>
 
-        <!-- Korea → Malaysia -->
-        <path class="gp-line" d="M770,130 Q750,190 700,220" fill="none" stroke="rgba(77,157,255,.2)" stroke-width="1.5"/>
-        <path class="gp-line-glow" d="M770,130 Q750,190 700,220" fill="none" stroke="url(#shootA)" stroke-width="2" stroke-dasharray="20 220" stroke-dashoffset="0">
-          <animate attributeName="stroke-dashoffset" from="0" to="-240" dur="2.4s" repeatCount="indefinite"/>
-        </path>
+          <!-- Korea → Malaysia -->
+          <path d="M920,125 Q910,220 852,272" fill="none" stroke="rgba(77,157,255,.15)" stroke-width="2"/>
+          <path d="M920,125 Q910,220 852,272" fill="none" stroke="url(#lineG)" stroke-width="2.5" stroke-dasharray="25 250">
+            <animate attributeName="stroke-dashoffset" from="0" to="-275" dur="2.5s" repeatCount="indefinite"/>
+          </path>
+        </g>
 
-        <!-- Country markers with hover areas -->
+        <!-- ═══ MARKERS ═══ -->
         <!-- Korea HQ -->
-        <g class="gp-marker gp-marker--hq">
-          <circle cx="770" cy="130" r="24" fill="url(#gpGlow)"/>
-          <circle class="gp-pulse" cx="770" cy="130" r="8" fill="none" stroke="#4d9dff" stroke-width=".8"/>
-          <circle class="gp-pulse gp-pulse--2" cx="770" cy="130" r="8" fill="none" stroke="#4d9dff" stroke-width=".8"/>
-          <circle cx="770" cy="130" r="5" fill="#1a6dff" stroke="#fff" stroke-width="2"/>
-          <text x="770" y="158" class="gp-label gp-label--main">KOREA</text>
-          <text x="770" y="170" class="gp-label gp-label--sub">HEADQUARTERS</text>
-        </g>
+        <circle cx="920" cy="125" r="32" fill="url(#hqG)"/>
+        <circle class="gp__pulse" cx="920" cy="125" r="10"/>
+        <circle class="gp__pulse gp__pulse--b" cx="920" cy="125" r="10"/>
+        <circle cx="920" cy="125" r="6" fill="#1a6dff" stroke="#fff" stroke-width="2.5"/>
+        <text x="920" y="162" class="gp__lbl gp__lbl--lg">KOREA</text>
+        <text x="920" y="175" class="gp__lbl gp__lbl--sm">HEADQUARTERS</text>
 
         <!-- USA -->
-        <g class="gp-marker" data-tooltip="Key export market for SiC processing equipment">
-          <circle class="gp-pulse" cx="210" cy="155" r="6" fill="none" stroke="#4d9dff" stroke-width=".6"/>
-          <circle cx="210" cy="155" r="4.5" fill="#4d9dff" stroke="#fff" stroke-width="1.5"/>
-          <text x="210" y="147" class="gp-label">USA</text>
-          <rect class="gp-hit" x="185" y="135" width="50" height="35" fill="transparent"/>
+        <g class="gp__pin" data-tip="Key export hub — Semiconductor equipment, 50+ units">
+          <circle class="gp__pulse" cx="245" cy="175" r="7"/>
+          <circle cx="245" cy="175" r="5" fill="#4d9dff" stroke="#fff" stroke-width="2"/>
+          <text x="200" y="168" class="gp__lbl" text-anchor="end">🇺🇸  USA</text>
         </g>
 
         <!-- China -->
-        <g class="gp-marker" data-tooltip="Wire sawing equipment for semiconductor and magnet industries">
-          <circle class="gp-pulse" cx="685" cy="140" r="6" fill="none" stroke="#4d9dff" stroke-width=".6"/>
-          <circle cx="685" cy="140" r="4.5" fill="#4d9dff" stroke="#fff" stroke-width="1.5"/>
-          <text x="670" y="132" class="gp-label">CHINA</text>
-          <rect class="gp-hit" x="650" y="120" width="60" height="35" fill="transparent"/>
+        <g class="gp__pin" data-tip="Wire sawing & drilling equipment for semiconductor industry">
+          <circle class="gp__pulse" cx="845" cy="135" r="7"/>
+          <circle cx="845" cy="135" r="5" fill="#4d9dff" stroke="#fff" stroke-width="2"/>
+          <text x="810" y="125" class="gp__lbl" text-anchor="end">CHINA  🇨🇳</text>
         </g>
 
         <!-- Vietnam -->
-        <g class="gp-marker" data-tooltip="Precision machining equipment for growing manufacturing sector">
-          <circle class="gp-pulse" cx="700" cy="210" r="6" fill="none" stroke="#4d9dff" stroke-width=".6"/>
-          <circle cx="700" cy="210" r="4.5" fill="#4d9dff" stroke="#fff" stroke-width="1.5"/>
-          <text x="680" y="202" class="gp-label" text-anchor="end">VIETNAM</text>
-          <rect class="gp-hit" x="650" y="195" width="65" height="30" fill="transparent"/>
+        <g class="gp__pin" data-tip="Precision machining equipment for manufacturing sector">
+          <circle class="gp__pulse" cx="838" cy="248" r="7"/>
+          <circle cx="838" cy="248" r="5" fill="#4d9dff" stroke="#fff" stroke-width="2"/>
+          <text x="802" y="244" class="gp__lbl" text-anchor="end">VIETNAM  🇻🇳</text>
         </g>
 
         <!-- Malaysia -->
-        <g class="gp-marker" data-tooltip="Semiconductor equipment for precision component production">
-          <circle class="gp-pulse" cx="700" cy="235" r="6" fill="none" stroke="#4d9dff" stroke-width=".6"/>
-          <circle cx="700" cy="235" r="4.5" fill="#4d9dff" stroke="#fff" stroke-width="1.5"/>
-          <text x="715" y="250" class="gp-label">MALAYSIA</text>
-          <rect class="gp-hit" x="680" y="225" width="60" height="35" fill="transparent"/>
+        <g class="gp__pin" data-tip="Semiconductor component processing equipment">
+          <circle class="gp__pulse" cx="852" cy="272" r="7"/>
+          <circle cx="852" cy="272" r="5" fill="#4d9dff" stroke="#fff" stroke-width="2"/>
+          <text x="870" y="295" class="gp__lbl">MALAYSIA  🇲🇾</text>
         </g>
       </svg>
 
-      <!-- Tooltip (positioned via JS) -->
-      <div class="gp-tooltip" id="gpTooltip">
-        <span class="gp-tooltip__text"></span>
-      </div>
+      <div class="gp__tip" id="gpTip"><span></span></div>
     </div>
 
-    <!-- Stats -->
-    <div class="gp-stats" data-snt-reveal>
-      <div class="gp-stat"><span class="gp-stat__val">25+</span><span class="gp-stat__label">Years of Innovation</span></div>
-      <div class="gp-stat"><span class="gp-stat__val">30+</span><span class="gp-stat__label">Machine Types</span></div>
-      <div class="gp-stat"><span class="gp-stat__val">20+</span><span class="gp-stat__label">Registered Patents</span></div>
-      <div class="gp-stat"><span class="gp-stat__val">5+</span><span class="gp-stat__label">Export Countries</span></div>
+    <div class="gp__stats" data-snt-reveal>
+      <div><b>25+</b><span>Years of Innovation</span></div>
+      <div><b>30+</b><span>Machine Types</span></div>
+      <div><b>20+</b><span>Registered Patents</span></div>
+      <div><b>5+</b><span>Export Countries</span></div>
     </div>
   </div>
 </section>
 
 <style>
-.gp-section{background:#0f1a33;padding:clamp(60px,8vw,100px) clamp(20px,4vw,48px);font-family:"Pretendard","Noto Sans KR",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden;}
-.gp-inner{max-width:1100px;margin:0 auto;}
-.gp-head{text-align:center;margin-bottom:clamp(20px,3vw,32px);}
-.gp-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;color:#4d9dff;margin-bottom:12px;}
-.gp-title{font-size:clamp(26px,3.2vw,40px);font-weight:800;color:#fff;letter-spacing:-.02em;}
-.gp-accent{color:#4d9dff;}
-.gp-desc{font-size:clamp(14px,1.2vw,15.5px);color:rgba(255,255,255,.55);max-width:560px;margin:12px auto 0;line-height:1.7;}
+.gp{background:#0a1225;padding:clamp(56px,8vw,96px) clamp(20px,4vw,48px);font-family:"Pretendard","Noto Sans KR",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden;}
+.gp__inner{max-width:1200px;margin:0 auto;}
+.gp__head{text-align:center;margin-bottom:clamp(16px,2vw,24px);}
+.gp__title{font-size:clamp(28px,3.5vw,44px);font-weight:800;color:#fff;letter-spacing:-.02em;}
+.gp__title em{font-style:italic;color:#4d9dff;}
+.gp__desc{font-size:clamp(13px,1.1vw,15px);color:rgba(255,255,255,.45);max-width:540px;margin:10px auto 0;line-height:1.7;}
 
-/* Map */
-.gp-map-wrap{position:relative;max-width:960px;margin:0 auto;}
-.gp-map{width:100%;height:auto;display:block;}
+.gp__map-wrap{position:relative;max-width:1100px;margin:0 auto;}
+.gp__svg{width:100%;height:auto;display:block;}
 
 /* Labels */
-.gp-label{fill:#fff;font-size:11px;font-weight:800;font-family:"Pretendard",sans-serif;text-anchor:middle;text-shadow:0 1px 4px rgba(0,0,0,.6);letter-spacing:.06em;}
-.gp-label--main{font-size:12px;fill:#fff;}
-.gp-label--sub{font-size:8px;fill:rgba(255,255,255,.45);font-weight:500;letter-spacing:.12em;}
+.gp__lbl{fill:#fff;font-size:13px;font-weight:800;font-family:"Pretendard",sans-serif;text-anchor:middle;letter-spacing:.05em;}
+.gp__lbl--lg{font-size:14px;}
+.gp__lbl--sm{font-size:9px;fill:rgba(255,255,255,.4);font-weight:500;letter-spacing:.15em;}
 
-/* Pulse animation */
-.gp-pulse{animation:gpPulse 2.5s ease-out infinite;}
-.gp-pulse--2{animation-delay:1.25s;}
-@keyframes gpPulse{
-  0%{r:6;opacity:.7;}
-  100%{r:22;opacity:0;}
-}
-.gp-marker--hq .gp-pulse{animation-name:gpPulseHQ;}
-@keyframes gpPulseHQ{
-  0%{r:8;opacity:.6;}
-  100%{r:30;opacity:0;}
-}
+/* Pulse */
+.gp__pulse{fill:none;stroke:#4d9dff;stroke-width:.8;animation:gpP 2.5s ease-out infinite;}
+.gp__pulse--b{animation-delay:1.25s;}
+@keyframes gpP{0%{r:8;opacity:.7}100%{r:28;opacity:0}}
 
-/* Marker hover */
-.gp-marker{cursor:pointer;transition:transform .2s;}
-.gp-hit{pointer-events:all;}
+/* Pin hover */
+.gp__pin{cursor:pointer;}
+.gp__pin circle:last-of-type{transition:r .2s,fill .2s;}
+.gp__pin:hover circle:last-of-type{r:7;fill:#fff;}
 
 /* Tooltip */
-.gp-tooltip{position:absolute;background:rgba(26,109,255,.95);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s;white-space:nowrap;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);z-index:10;}
-.gp-tooltip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:rgba(26,109,255,.95);}
-.gp-tooltip.is-visible{opacity:1;transform:translateY(0);}
+.gp__tip{position:absolute;background:rgba(20,40,80,.92);backdrop-filter:blur(8px);color:#fff;padding:10px 16px;border-radius:10px;font-size:12px;font-weight:600;line-height:1.5;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;white-space:nowrap;box-shadow:0 12px 32px -8px rgba(0,0,0,.5);border:1px solid rgba(77,157,255,.25);z-index:10;letter-spacing:.01em;}
+.gp__tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:rgba(20,40,80,.92);}
+.gp__tip.show{opacity:1;transform:translateY(0);}
 
 /* Stats */
-.gp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:clamp(32px,4vw,48px);text-align:center;}
-.gp-stat__val{display:block;font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff;font-family:"SFMono-Regular","Consolas",monospace;}
-.gp-stat__label{font-size:13px;color:rgba(255,255,255,.5);}
-@media(max-width:600px){.gp-stats{grid-template-columns:repeat(2,1fr);gap:16px;}}
+.gp__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:clamp(28px,3vw,40px);text-align:center;padding-top:clamp(28px,3vw,40px);border-top:1px solid rgba(255,255,255,.06);}
+.gp__stats b{display:block;font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff;font-family:"SFMono-Regular","Consolas",monospace;}
+.gp__stats span{font-size:13px;color:rgba(255,255,255,.4);}
+@media(max-width:600px){.gp__stats{grid-template-columns:repeat(2,1fr);gap:16px;}}
 </style>
 
 <script>
 (function(){
-  var wrap = document.querySelector('.gp-map-wrap');
-  var tip = document.getElementById('gpTooltip');
-  if(!wrap||!tip) return;
-  var markers = wrap.querySelectorAll('.gp-marker[data-tooltip]');
-  markers.forEach(function(m){
-    m.addEventListener('mouseenter', function(e){
-      var text = m.getAttribute('data-tooltip');
-      tip.querySelector('.gp-tooltip__text').textContent = text;
-      var rect = wrap.getBoundingClientRect();
-      var svg = wrap.querySelector('svg');
-      var svgRect = svg.getBoundingClientRect();
-      var circle = m.querySelector('circle[cx]');
-      var cx = parseFloat(circle.getAttribute('cx'));
-      var cy = parseFloat(circle.getAttribute('cy'));
-      var scaleX = svgRect.width / 1000;
-      var scaleY = svgRect.height / 500;
-      var px = svgRect.left - rect.left + cx * scaleX;
-      var py = svgRect.top - rect.top + cy * scaleY - 16;
-      tip.style.left = px + 'px';
-      tip.style.top = py + 'px';
-      tip.style.transform = 'translate(-50%, -100%)';
-      tip.classList.add('is-visible');
+  var w=document.querySelector('.gp__map-wrap'),t=document.getElementById('gpTip');
+  if(!w||!t)return;
+  w.querySelectorAll('.gp__pin').forEach(function(p){
+    p.addEventListener('mouseenter',function(){
+      var txt=p.getAttribute('data-tip');if(!txt)return;
+      t.querySelector('span').textContent=txt;
+      var wr=w.getBoundingClientRect(),sv=w.querySelector('svg').getBoundingClientRect();
+      var c=p.querySelector('circle[cx]');
+      var cx=+c.getAttribute('cx'),cy=+c.getAttribute('cy');
+      var sx=sv.width/1200,sy=sv.height/600;
+      t.style.left=(sv.left-wr.left+cx*sx)+'px';
+      t.style.top=(sv.top-wr.top+cy*sy-18)+'px';
+      t.style.transform='translate(-50%,-100%)';
+      t.classList.add('show');
     });
-    m.addEventListener('mouseleave', function(){
-      tip.classList.remove('is-visible');
-    });
+    p.addEventListener('mouseleave',function(){t.classList.remove('show');});
   });
 })();
 </script>
 
-<section style="background:#fff;padding:clamp(60px,8vw,100px) clamp(20px,4vw,48px);font-family:'Pretendard','Noto Sans KR',-apple-system,sans-serif;">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:clamp(36px,4vw,56px);" data-snt-reveal>
-      <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;color:#1a6dff;margin-bottom:12px;">WHY SAEHAN NANOTECH</span>
-      <h2 style="font-size:clamp(26px,3.2vw,40px);font-weight:800;color:#0f1a33;letter-spacing:-.02em;">What Sets Us <span style="color:#1a6dff;">Apart</span></h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" data-snt-reveal>
-      <div style="background:#f5f7fb;border-radius:16px;padding:32px 28px;border:1px solid #e6e9f0;">
-        <h3 style="font-size:17px;font-weight:800;color:#0f1a33;margin-bottom:10px;">100% In-House</h3>
-        <p style="font-size:14px;color:#6a7589;line-height:1.75;">Every machine is developed, designed, manufactured, and serviced by our own team. When you call for support, you speak to the engineer who built your machine.</p>
-      </div>
-      <div style="background:#f5f7fb;border-radius:16px;padding:32px 28px;border:1px solid #e6e9f0;">
-        <h3 style="font-size:17px;font-weight:800;color:#0f1a33;margin-bottom:10px;">Custom-Built Per Order</h3>
-        <p style="font-size:14px;color:#6a7589;line-height:1.75;">No off-the-shelf machines. Every unit is engineered to your specific material, workpiece geometry, throughput target, and facility requirements.</p>
-      </div>
-      <div style="background:#f5f7fb;border-radius:16px;padding:32px 28px;border:1px solid #e6e9f0;">
-        <h3 style="font-size:17px;font-weight:800;color:#0f1a33;margin-bottom:10px;">Decades of Process Data</h3>
-        <p style="font-size:14px;color:#6a7589;line-height:1.75;">25+ years of cutting, grinding, drilling, and polishing hard brittle materials. Our process recipes are validated through real production — not simulations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section style="background:linear-gradient(135deg,#1a6dff 0%,#0050cc 100%);color:#fff;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px);text-align:center;font-family:'Pretendard','Noto Sans KR',-apple-system,sans-serif;">
-  <div style="max-width:640px;margin:0 auto;">
-    <h2 style="font-size:clamp(22px,2.8vw,34px);font-weight:800;color:#fff;margin-bottom:14px;">Ready to Discuss Your Project?</h2>
-    <p style="font-size:clamp(13px,1.2vw,15px);color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:28px;">Tell us about your material, workpiece, and production requirements.<br>Our engineering team will propose the optimal machine configuration.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-      <a href="mailto:info@saehannanotech.com" style="display:inline-flex;background:#fff;color:#1a6dff;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:700;">Contact Us</a>
-      <a href="machines.html" style="display:inline-flex;border:1.5px solid rgba(255,255,255,.45);color:#fff;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:700;">View Machine Lineup →</a>
-    </div>
-    <p style="font-size:12px;color:rgba(255,255,255,.5);">TEL: <a href="tel:+82-55-586-1331" style="color:rgba(255,255,255,.65);">+82-55-586-1331</a> | <a href="mailto:info@saehannanotech.com" style="color:rgba(255,255,255,.65);">info@saehannanotech.com</a></p>
-  </div>
-</section>
-<footer class="snt-footer"><div class="snt-footer__inner"><div class="snt-footer__top"><div><div class="snt-footer__logo-name">Saehan Nanotech Co., Ltd.</div><div class="snt-footer__logo-tag">Precision Machine Tool Manufacturer · Korea</div><p class="snt-footer__desc">R&amp;D and manufacturing of ultra-precision machine tools for semiconductor and display component processing. Established in Changwon, South Korea.</p></div><div><div class="snt-footer__col-title">About Us</div><div class="snt-footer__links"><a href="ceo.html">CEO Greeting</a><a href="history.html">History</a><a href="certifications.html">Certifications</a><a href="directions.html">Directions</a></div></div><div><div class="snt-footer__col-title">Machine</div><div class="snt-footer__links"><a href="machines.html">Machine</a><a href="double-sided-drilling.html">Both-Side Drilling Machine</a><a href="multi-wire-saw.html">Multi Wire Sawing Machine</a><a href="single-wire-saw.html">Single Wire Sawing Machine</a><a href="grinding-center.html">Grinding Center Machine</a><a href="core-drilling.html">Core Drilling Machine</a><a href="polishing.html">Single Polishing Machine</a><a href="vertical-grinding.html">Vertical Grinding Machine</a><a href="nano-imprinting.html">Nano Imprinting Machine</a></div></div></div><p class="snt-footer__contact">📍 59, Dongjeonsandandong-ro, Buk-myeon, Uichang-gu, Changwon-si, Gyeongsangnam-do, Republic of Korea</p><p class="snt-footer__contact">📞 <a href="tel:+82-55-586-1331">+82-55-586-1331</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@saehannanotech.com">info@saehannanotech.com</a></p><div class="snt-footer__bottom"><span class="snt-footer__copy">© 2024 Saehan Nanotech Co., Ltd. All rights reserved.</span><div class="snt-footer__policy"><a href="https://www.saehannanotech.com" target="_blank">Korean Website →</a></div></div></div></footer>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+>
