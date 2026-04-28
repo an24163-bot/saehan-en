@@ -190,14 +190,15 @@ a { text-decoration: none; color: inherit; }
   -webkit-font-smoothing: antialiased;
 }
 .snt-footer__inner { max-width: 1280px; margin: 0 auto; }
-.snt-footer__accent { height: 3px; background: linear-gradient(90deg, #004ea1, #00a0ea, #004ea1); }
-.snt-footer__body { padding: 56px clamp(20px,4vw,48px) 28px; }
+.snt-footer__accent { display: none; }
+.snt-footer__body { padding: 56px clamp(20px,4vw,48px) 28px; margin-top: 0; }
 .snt-footer__top {
   display: grid;
   grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
   gap: 40px; margin-bottom: 40px;
 }
 .snt-footer__brand img { height: 28px; margin-bottom: 16px; opacity: .85; }
+.snt-footer__logo-area{padding-top:8px;}
 .snt-footer__logo-name { display: none; }
 .snt-footer__logo-tag {
   font-size: 11px; color: rgba(255,255,255,.55);
