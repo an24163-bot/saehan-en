@@ -22,9 +22,9 @@ a { text-decoration: none; color: inherit; }
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --snt-blue:      #1a6dff;
-  --snt-blue-deep: #0b3d8f;
-  --snt-blue-soft: #eaf1ff;
+  --snt-blue:      #004ea1;
+  --snt-blue-deep: #003478;
+  --snt-blue-soft: #e8f1f8;
   --snt-navy:      #0f1a33;
   --snt-text:      #1b2333;
   --snt-muted:     #6a7589;
@@ -38,7 +38,7 @@ a { text-decoration: none; color: inherit; }
 .snt-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   height: var(--nav-h);
-  background: #ffffff;box-shadow:0 1px 3px rgba(0,0,0,.08);
+  background: rgba(255,255,255,0.97);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--snt-line);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -98,9 +98,9 @@ a { text-decoration: none; color: inherit; }
 }
 .snt-nav__dropdown a {
   display: block; padding: 9px 16px;
-  font-size: 13.5px; font-weight: 500; color: #1b2333 !important;
+  font-size: 13.5px; font-weight: 500; color: var(--snt-text);
   transition: background .15s, color .15s;
-  background: #fff !important;
+  background: #fff;
   position: relative;
 }
 .snt-nav__dropdown a:first-child {
@@ -121,7 +121,7 @@ a { text-decoration: none; color: inherit; }
 .snt-nav__dropdown a:last-child {
   border-bottom: 1px solid var(--snt-line);
 }
-.snt-nav__dropdown a:hover { background: #eaf1ff !important; color: #1a6dff !important; }
+.snt-nav__dropdown a:hover { background: var(--snt-blue-soft); color: var(--snt-blue); }
 .snt-nav__dropdown a.snt-current { color: var(--snt-blue); font-weight: 700; }
 
 /* Right side */
