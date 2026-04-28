@@ -1,13 +1,3 @@
-
-/* Force light mode — prevent browser dark mode override */
-:root { color-scheme: light only; }
-html, body { background-color: #ffffff !important; color: #1b2333 !important; }
-.snt-nav { background: #ffffff !important; }
-@media (prefers-color-scheme: dark) {
-  .snt-nav { background: #ffffff !important; }
-  .snt-nav__link { color: #0f1a33 !important; }
-  .snt-nav__hamburger span { background: #0f1a33 !important; }
-}
 /* ============================================================
    Saehan Nanotech English Site — main.css
    Korean site design system (snt-) faithfully replicated
@@ -273,19 +263,4 @@ a { text-decoration: none; color: inherit; }
 @media(min-width:861px){
   .vh-fit{min-height:100vh;display:flex;align-items:center;}
   .vh-fit>*{width:100%;}
-}
-
-/* ── Dark Mode Support ── */
-
-
-/* Dark Mode */
-@media(prefers-color-scheme:dark){
-  .snt-nav{background:rgba(15,26,51,.95)!important;border-bottom:1px solid rgba(255,255,255,.08)!important;}
-  .snt-nav__logo img{filter:brightness(10)!important;}
-  .snt-nav__link,.snt-nav__item>span{color:rgba(255,255,255,.85)!important;}
-  .snt-nav__dropdown{background:rgba(15,26,51,.98)!important;border:1px solid rgba(255,255,255,.1)!important;}
-  .snt-nav__dropdown a{color:rgba(255,255,255,.7)!important;}
-  .snt-nav__lang{color:rgba(255,255,255,.6)!important;border-color:rgba(255,255,255,.15)!important;}
-  .snt-mobile-menu{background:rgba(15,26,51,.98)!important;}
-  .snt-mobile-link{color:rgba(255,255,255,.8)!important;border-color:rgba(255,255,255,.08)!important;}
 }
