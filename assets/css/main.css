@@ -194,8 +194,9 @@ a { text-decoration: none; color: inherit; }
 .snt-footer__body { padding: 56px clamp(20px,4vw,48px) 28px; margin-top: 0; }
 .snt-footer__top {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
-  gap: 40px; margin-bottom: 40px;
+  grid-template-columns: 1.2fr 2.8fr;
+  gap: clamp(32px,4vw,56px);
+  margin-bottom: 40px;
 }
 .snt-footer__brand img { height: 28px; margin-bottom: 16px; opacity: .85; }
 .snt-footer__logo-area{padding-top:8px;}
@@ -250,8 +251,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .snt-nav__menu, .snt-nav__right { display: none; }
   .snt-nav__hamburger { display: flex; }
-  .snt-footer__top { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .snt-footer__top > :first-child { grid-column: 1/-1; }
+  .snt-footer__top { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 600px) {
   .snt-footer__top { grid-template-columns: 1fr; gap: 28px; }
