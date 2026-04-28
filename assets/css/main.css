@@ -274,3 +274,19 @@ a { text-decoration: none; color: inherit; }
   .vh-fit{min-height:100vh;display:flex;align-items:center;}
   .vh-fit>*{width:100%;}
 }
+
+/* ── Dark Mode Support ── */
+@media(prefers-color-scheme:dark){
+  .snt-nav{background:rgba(15,26,51,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);}
+  .snt-nav__logo img{filter:brightness(10);}
+  .snt-nav__link,.snt-nav__item>span{color:rgba(255,255,255,.85)!important;}
+  .snt-nav__link:hover,.snt-nav__item>span:hover{color:#fff!important;}
+  .snt-nav__hamburger span{background:#fff!important;}
+  .snt-nav__dropdown{background:rgba(15,26,51,.98);border:1px solid rgba(255,255,255,.1);}
+  .snt-nav__dropdown a{color:rgba(255,255,255,.7)!important;}
+  .snt-nav__dropdown a:hover{color:#4d9dff!important;background:rgba(255,255,255,.05);}
+  .snt-nav__lang{color:rgba(255,255,255,.6)!important;border-color:rgba(255,255,255,.15)!important;}
+  .snt-nav__cta{background:#1a6dff!important;color:#fff!important;}
+  .snt-mobile-menu{background:rgba(15,26,51,.98)!important;}
+  .snt-mobile-link{color:rgba(255,255,255,.8)!important;border-color:rgba(255,255,255,.08)!important;}
+}
