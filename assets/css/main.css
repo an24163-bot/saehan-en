@@ -462,5 +462,12 @@ a { text-decoration: none; color: inherit; }
 .snt-nav__logo img{height:clamp(28px,3.2vw,36px);width:auto;}
 
 /* Hero fills viewport below nav */
-.idx-hero{margin-top:0;}
+
 body{margin:0;padding:0;}
+
+/* Hero responsive */
+.idx-hero{padding-top:var(--nav-h);}
+@media(max-width:768px){
+  .idx-hero{padding-top:calc(var(--nav-h) + 8px);}
+  .idx-hero .snt-hero__inner{min-height:calc(100vh - var(--nav-h));padding:clamp(16px,4vw,32px) 20px clamp(24px,5vw,40px);}
+}
