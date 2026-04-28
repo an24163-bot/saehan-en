@@ -265,3 +265,8 @@ a { text-decoration: none; color: inherit; }
   .vh-fit{min-height:100vh;display:flex;align-items:center;}
   .vh-fit>*{width:100%;}
 }
+
+/* Footer col-group */
+.snt-footer__col-group{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:32px;}
+@media(max-width:900px){.snt-footer__col-group{grid-template-columns:repeat(2,1fr);gap:24px;}}
+@media(max-width:500px){.snt-footer__col-group{grid-template-columns:1fr;}}
