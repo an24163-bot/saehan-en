@@ -38,7 +38,7 @@ a { text-decoration: none; color: inherit; }
 .snt-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   height: var(--nav-h);
-  background: rgba(255,255,255,0.97);
+  background: #ffffff;box-shadow:0 1px 3px rgba(0,0,0,.08);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--snt-line);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
