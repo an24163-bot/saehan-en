@@ -36,18 +36,3 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   targets.forEach(function(el){ io.observe(el); });
 })();
-
-// Nav scroll effect
-(function(){
-  var nav = document.getElementById('sntNav');
-  if(!nav) return;
-  function onScroll(){
-    if(window.scrollY > 50){
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-})();
