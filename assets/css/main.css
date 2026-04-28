@@ -1,3 +1,13 @@
+
+/* Force light mode — prevent browser dark mode override */
+:root { color-scheme: light only; }
+html, body { background-color: #ffffff !important; color: #1b2333 !important; }
+.snt-nav { background: #ffffff !important; }
+@media (prefers-color-scheme: dark) {
+  .snt-nav { background: #ffffff !important; }
+  .snt-nav__link { color: #0f1a33 !important; }
+  .snt-nav__hamburger span { background: #0f1a33 !important; }
+}
 /* ============================================================
    Saehan Nanotech English Site — main.css
    Korean site design system (snt-) faithfully replicated
