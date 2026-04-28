@@ -431,3 +431,28 @@ a { text-decoration: none; color: inherit; }
 
 /* Sub-page banner: account for transparent nav overlay */
 .snt-page-banner{padding-top:calc(var(--nav-h) + clamp(40px,5vw,60px));}
+
+/* Mobile nav: always visible */
+@media(max-width:960px){
+  .snt-nav{
+    background:rgba(255,255,255,.97)!important;
+    border-bottom:1px solid #e6e9f0!important;
+  }
+  .snt-nav__logo img{filter:none!important;}
+  .snt-nav__hamburger span{background:#1a6dff!important;}
+  .idx-hero{margin-top:0!important;padding-top:var(--nav-h)!important;}
+}
+
+/* Scroll reveal animations */
+[data-snt-reveal]{
+  opacity:0;
+  transform:translateY(32px);
+  transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);
+}
+[data-snt-reveal].is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+[data-snt-reveal]:nth-child(2){transition-delay:.1s;}
+[data-snt-reveal]:nth-child(3){transition-delay:.2s;}
+[data-snt-reveal]:nth-child(4){transition-delay:.3s;}
