@@ -423,8 +423,8 @@ a { text-decoration: none; color: inherit; }
 .snt-nav.scrolled .snt-nav__lang{color:#6a7589;border-color:#d0d8e8;}
 
 .snt-nav__logo img{transition:filter .3s;}
-.snt-nav:not(.scrolled) .snt-nav__logo img{filter:brightness(0) invert(1);}
-.snt-nav.scrolled .snt-nav__logo img{filter:none;}
+
+
 
 .snt-nav:not(.scrolled) .snt-nav__hamburger span{background:#fff;}
 .snt-nav.scrolled .snt-nav__hamburger span{background:#1a6dff;}
@@ -456,3 +456,11 @@ a { text-decoration: none; color: inherit; }
 [data-snt-reveal]:nth-child(2){transition-delay:.1s;}
 [data-snt-reveal]:nth-child(3){transition-delay:.2s;}
 [data-snt-reveal]:nth-child(4){transition-delay:.3s;}
+
+/* Dual logo: white on transparent nav, dark on scrolled nav */
+.snt-nav__logo-white,.snt-nav__logo-dark{height:clamp(28px,3.2vw,36px);width:auto;transition:opacity .3s;}
+.snt-nav__logo-dark{display:none;}
+.snt-nav.scrolled .snt-nav__logo-white{display:none;}
+.snt-nav.scrolled .snt-nav__logo-dark{display:block;}
+/* Sub pages: always show dark logo (no hero) */
+.snt-nav__logo img{height:clamp(28px,3.2vw,36px);width:auto;}
