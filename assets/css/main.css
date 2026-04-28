@@ -281,7 +281,7 @@ a { text-decoration: none; color: inherit; }
   .snt-nav__logo img{filter:brightness(10);}
   .snt-nav__link,.snt-nav__item>span{color:rgba(255,255,255,.85)!important;}
   .snt-nav__link:hover,.snt-nav__item>span:hover{color:#fff!important;}
-  .snt-nav__hamburger span{background:#fff!important;}
+  .snt-nav__hamburger span{background:#4d9dff!important;}
   .snt-nav__dropdown{background:rgba(15,26,51,.98);border:1px solid rgba(255,255,255,.1);}
   .snt-nav__dropdown a{color:rgba(255,255,255,.7)!important;}
   .snt-nav__dropdown a:hover{color:#4d9dff!important;background:rgba(255,255,255,.05);}
