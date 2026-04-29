@@ -24,19 +24,16 @@
     if(h === cur) a.classList.add('snt-current');
   });
 
+  var hasIO = ('IntersectionObserver' in window);
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* IntersectionObserver reveal */
-  var targets = document.querySelectorAll('[data-snt-reveal]');
-  if(!('IntersectionObserver' in window)){
-    targets.forEach(function(el){ el.classList.add('is-visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.classList.add('is-visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  targets.forEach(function(el){ io.observe(el); });
-})();
+  var revealTargets = document.querySelectorAll('[data-snt-reveal]');
+  if(!hasIO){
+    revealTargets.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          io.un
