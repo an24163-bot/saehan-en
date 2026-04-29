@@ -6,9 +6,13 @@
   var btn = document.querySelector('.snt-nav__hamburger');
   var mob = document.querySelector('.snt-nav__mobile');
   if(btn && mob){
+    if(!mob.id) mob.id = 'snt-nav-mobile';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', mob.id);
     btn.addEventListener('click', function(){
       var o = mob.classList.toggle('open');
       btn.classList.toggle('open', o);
+      btn.setAttribute('aria-expanded', o ? 'true' : 'false');
       document.body.style.overflow = o ? 'hidden' : '';
     });
   }

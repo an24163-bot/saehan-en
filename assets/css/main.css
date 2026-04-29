@@ -316,3 +316,10 @@ a { text-decoration: none; color: inherit; }
 .snt-cta-bottom__btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);}
 .snt-cta-bottom__info{font-size:12px;color:rgba(255,255,255,.5);}
 .snt-cta-bottom__info a{color:rgba(255,255,255,.65);}
+
+/* ========================================================================
+   SVG icon helper (snt-svgicon) — used by inline lucide-style line icons
+   that replace emojis (M-1 in 0428 review). Inherits parent font-size via
+   width/height="1em" so it fits naturally inside existing icon containers.
+   ======================================================================== */
+.snt-svgicon{display:inline-block;vertical-align:middle;flex-shrink:0;}
