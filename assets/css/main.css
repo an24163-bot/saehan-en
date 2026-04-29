@@ -292,3 +292,27 @@ a { text-decoration: none; color: inherit; }
   .snt-ft-clean__dot{display:none;}
   .snt-ft-clean__bottom{flex-direction:column;text-align:center;}
 }
+
+
+/* ========================================================================
+   Page Banner (snt-pb) — used by all content pages above the page heading
+   Extracted from per-page inline <style> blocks (H-3 in 0428 review)
+   ======================================================================== */
+.snt-pb{position:relative;min-height:300px;display:flex;align-items:flex-end;background-size:cover;background-position:center;padding:0 clamp(20px,4vw,48px) clamp(44px,5vw,68px);font-family:"Pretendard","Noto Sans KR",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}.snt-pb__overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,20,50,.3) 0%,rgba(10,20,50,.75) 100%);}.snt-pb__inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;}.snt-pb__eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.68);margin-bottom:10px;}.snt-pb__title{font-size:clamp(26px,3.8vw,50px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px;}.snt-pb__sub{font-size:clamp(13px,1.3vw,15px);color:rgba(255,255,255,.72);line-height:1.7;max-width:640px;}
+
+/* ========================================================================
+   Bottom CTA (snt-cta-bottom) — used by content pages above the footer
+   Canonical version. Some product pages keep additional !important overrides
+   inline to fight legacy resets — those are safe to coexist with this rule.
+   ======================================================================== */
+.snt-cta-bottom{background:linear-gradient(135deg,#004ea1 0%,#004ea1 100%);color:#fff;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px);text-align:center;font-family:"Pretendard","Noto Sans KR",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
+.snt-cta-bottom__inner{max-width:640px;margin:0 auto;}
+.snt-cta-bottom__title{font-size:clamp(22px,2.8vw,34px);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.02em;}
+.snt-cta-bottom__desc{font-size:clamp(13px,1.2vw,15px);color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:28px;}
+.snt-cta-bottom__btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.snt-cta-bottom__btn-solid{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#0068b7;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:700;transition:transform .2s,box-shadow .2s;}
+.snt-cta-bottom__btn-solid:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.18);}
+.snt-cta-bottom__btn-ghost{display:inline-flex;align-items:center;gap:6px;border:1.5px solid rgba(255,255,255,.45);color:#fff;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:700;transition:background .2s,border-color .2s;}
+.snt-cta-bottom__btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);}
+.snt-cta-bottom__info{font-size:12px;color:rgba(255,255,255,.5);}
+.snt-cta-bottom__info a{color:rgba(255,255,255,.65);}
