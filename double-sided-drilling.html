@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://en.saehannanotech.com/double-sided-drilling.html">
 <meta property="og:locale" content="en_US">
 <link rel="canonical" href="https://en.saehannanotech.com/double-sided-drilling.html">
-<link rel="stylesheet" href="assets/css/main.css?v=20260431">
+<link rel="stylesheet" href="assets/css/main.css?v=20260433">
 <meta property="og:image" content="https://en.saehannanotech.com/images/og-image.jpg">
 <link rel="alternate" hreflang="en" href="https://en.saehannanotech.com/double-sided-drilling.html">
 <link rel="alternate" hreflang="ko" href="https://www.saehannanotech.com">
@@ -99,7 +99,90 @@
 .dd-cta__inner{max-width:640px;margin:0 auto;}
 
 @media(max-width:560px){.dd-specs{grid-template-columns:1fr;gap:14px;}}
-</style>
+
+/* DIFFERENTIATION (Before/After) */
+.dd-diff{background:#f5f7fb;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px);}
+.dd-diff__inner{max-width:1200px;margin:0 auto;}
+.dd-diff__head{text-align:center;margin-bottom:clamp(40px,5vw,64px);}
+.dd-diff__head h2{font-size:clamp(26px,3.4vw,42px);font-weight:800;color:#0f1a33;letter-spacing:-.02em;line-height:1.25;margin:10px 0 14px;}
+.dd-diff__head h2 span{color:#0068b7;}
+.dd-diff__head p{font-size:clamp(14px,1.2vw,16px);color:#6a7589;line-height:1.75;max-width:640px;margin:0 auto;}
+.dd-diff__row{margin-bottom:clamp(48px,6vw,72px);}
+.dd-diff__row:last-child{margin-bottom:0;}
+.dd-diff__rowhead{display:flex;align-items:flex-start;gap:18px;margin-bottom:clamp(22px,2.6vw,32px);}
+.dd-diff__rowhead .num{flex-shrink:0;width:44px;height:44px;background:#004ea1;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;}
+.dd-diff__rowhead .ti{font-size:clamp(20px,2.2vw,28px);font-weight:800;color:#0f1a33;letter-spacing:-.01em;line-height:1.3;margin:0 0 6px;}
+.dd-diff__rowhead .desc{font-size:clamp(13.5px,1.1vw,15px);color:#6a7589;line-height:1.7;margin:0;}
+.dd-diff__pair{display:grid;grid-template-columns:1fr 80px 1fr;gap:0;align-items:stretch;}
+@media(max-width:860px){.dd-diff__pair{grid-template-columns:1fr;gap:14px;}}
+.dd-diff__col{background:#fff;border-radius:14px;padding:clamp(24px,2.8vw,32px);border:1px solid #e6e9f0;}
+.dd-diff__col--bef{}
+.dd-diff__col--aft{border:1.5px solid #0068b7;background:linear-gradient(135deg,#fff,#f7faff);box-shadow:0 16px 40px -20px rgba(0,104,183,.25);}
+.dd-diff__lbl{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.18em;padding:5px 10px;border-radius:4px;margin-bottom:12px;}
+.dd-diff__col--bef .dd-diff__lbl{background:#f0f2f7;color:#6a7589;}
+.dd-diff__col--aft .dd-diff__lbl{background:#0068b7;color:#fff;}
+.dd-diff__sub{font-size:clamp(15px,1.4vw,17px);font-weight:700;color:#0f1a33;margin:0 0 14px;letter-spacing:-.01em;}
+.dd-diff__col--aft .dd-diff__sub{color:#004ea1;}
+.dd-diff__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+.dd-diff__list li{font-size:clamp(13px,1.05vw,14.5px);color:#1b2333;line-height:1.6;padding-left:18px;position:relative;}
+.dd-diff__list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#c0c8d5;}
+.dd-diff__col--aft .dd-diff__list li::before{background:#0068b7;}
+.dd-diff__list li b{font-weight:800;color:#0068b7;}
+.dd-diff__col--bef .dd-diff__list li b{color:#1b2333;}
+.dd-diff__arrow{display:flex;align-items:center;justify-content:center;color:#0068b7;font-size:34px;font-weight:300;}
+@media(max-width:860px){.dd-diff__arrow{transform:rotate(90deg);font-size:24px;padding:8px 0;}}
+
+/* CORE VALUE */
+.dd-core{background:#fff;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px);}
+.dd-core__inner{max-width:1200px;margin:0 auto;}
+.dd-core__head{text-align:center;margin-bottom:clamp(40px,5vw,60px);}
+.dd-core__head h2{font-size:clamp(26px,3.4vw,42px);font-weight:800;color:#0f1a33;letter-spacing:-.02em;line-height:1.25;margin:10px 0 14px;}
+.dd-core__head h2 span{color:#0068b7;}
+.dd-core__head p{font-size:clamp(14px,1.2vw,16px);color:#6a7589;line-height:1.75;max-width:640px;margin:0 auto;}
+.dd-core__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,28px);}
+@media(max-width:860px){.dd-core__grid{grid-template-columns:1fr;}}
+.dd-core__card{background:#fff;border:1px solid #e6e9f0;border-radius:18px;padding:clamp(28px,3vw,40px);transition:transform .35s,box-shadow .35s,border-color .35s;}
+.dd-core__card:hover{transform:translateY(-4px);box-shadow:0 24px 56px -28px rgba(0,78,161,.28);border-color:#bcd3ea;}
+.dd-core__num{font-size:13px;font-weight:800;color:#0068b7;letter-spacing:.16em;margin-bottom:14px;}
+.dd-core__big{display:flex;align-items:baseline;gap:6px;margin-bottom:8px;line-height:1;}
+.dd-core__big .v{font-size:clamp(48px,6.4vw,84px);font-weight:800;color:#004ea1;letter-spacing:-.04em;font-family:'SFMono-Regular','Consolas',monospace;}
+.dd-core__big .u{font-size:clamp(20px,2vw,26px);font-weight:700;color:#0068b7;}
+.dd-core__lbl{font-size:13px;color:#6a7589;margin-bottom:18px;letter-spacing:.02em;}
+.dd-core__name{font-size:clamp(18px,1.8vw,22px);font-weight:800;color:#0f1a33;margin-bottom:6px;letter-spacing:-.01em;}
+.dd-core__sname{font-size:11.5px;font-weight:700;letter-spacing:.18em;color:#0068b7;margin-bottom:18px;}
+.dd-core__bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;border-top:1px solid #eef1f6;padding-top:18px;}
+.dd-core__bullets li{font-size:clamp(12.5px,1vw,13.5px);color:#1b2333;line-height:1.6;padding-left:16px;position:relative;}
+.dd-core__bullets li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:#0068b7;border-radius:50%;}
+.dd-core__bullets li b{font-weight:800;color:#0068b7;}
+
+/* APPLICATION */
+.dd-app{background:#f5f7fb;padding:clamp(60px,8vw,100px) clamp(20px,4vw,48px);}
+.dd-app__inner{max-width:1200px;margin:0 auto;}
+.dd-app__head{text-align:center;margin-bottom:clamp(36px,4.5vw,52px);}
+.dd-app__head h2{font-size:clamp(26px,3.4vw,42px);font-weight:800;color:#0f1a33;letter-spacing:-.02em;line-height:1.25;margin:10px 0 14px;}
+.dd-app__head h2 span{color:#0068b7;}
+.dd-app__head p{font-size:clamp(14px,1.2vw,16px);color:#6a7589;line-height:1.75;max-width:680px;margin:0 auto;}
+.dd-app__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.8vw,22px);}
+@media(max-width:860px){.dd-app__grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dd-app__grid{grid-template-columns:1fr;}}
+.dd-app__card{background:#fff;border:1px solid #e6e9f0;border-radius:14px;padding:clamp(22px,2.4vw,28px);position:relative;transition:transform .3s,box-shadow .3s,border-color .3s;}
+.dd-app__card:hover{transform:translateY(-3px);box-shadow:0 18px 44px -22px rgba(15,26,51,.18);border-color:#bcd3ea;}
+.dd-app__tag{position:absolute;top:14px;right:14px;font-size:10px;font-weight:800;letter-spacing:.1em;background:#e8f1f8;color:#0068b7;padding:4px 9px;border-radius:4px;}
+.dd-app__icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#dae6fa,#e4ecf6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.dd-app__icon svg{width:26px;height:26px;color:#004ea1;}
+.dd-app__name{font-size:clamp(16px,1.5vw,18px);font-weight:800;color:#0f1a33;margin:0 0 4px;letter-spacing:-.01em;}
+.dd-app__en{font-size:11px;font-weight:700;letter-spacing:.14em;color:#0068b7;margin-bottom:12px;}
+.dd-app__desc{font-size:13px;color:#6a7589;line-height:1.65;margin:0;}
+
+/* Enhanced spec table — multi-section */
+.dd-table-grouped{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e6e9f0;margin-top:24px;}
+.dd-table-grouped tr.cat td{background:#0f1a33;color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.18em;padding:11px 20px;text-transform:uppercase;}
+.dd-table-grouped th{text-align:left;padding:13px 20px;font-size:13px;font-weight:700;color:#0f1a33;background:#f8f9fc;width:240px;border-bottom:1px solid #e6e9f0;border-right:1px solid #e6e9f0;}
+.dd-table-grouped td{padding:13px 20px;font-size:13.5px;color:#6a7589;border-bottom:1px solid #e6e9f0;}
+.dd-table-grouped tr:last-child th,.dd-table-grouped tr:last-child td{border-bottom:none;}
+.dd-table-grouped tr.row:hover{background:#f7faff;}
+.dd-table-grouped tr.row:hover th{background:#eef4fb;}
+@media(max-width:560px){.dd-table-grouped th{width:46%;font-size:12px;padding:10px 12px;}.dd-table-grouped td{font-size:12px;padding:10px 12px;}}</style>
 
 <!-- ══ SECTION 1: Hero — Image Left + Description Right ══ -->
 <section class="dd-hero dd">
@@ -124,6 +207,133 @@
         <div class="dd-spec"><span class="dd-spec__val">Ø 0.30 mm</span><span class="dd-spec__label">Min Diameter</span></div>
       </div>
       <div class="dd-badge"><span style="font-size:10px;color:#0068b7;">◈</span><span class="dd-badge__text">Korean Patent No. 10-1579164</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 1.5: Differentiation (Before/After) ══ -->
+<section class="dd-diff dd">
+  <div class="dd-diff__inner">
+    <div class="dd-diff__head" data-snt-reveal>
+      <span class="dd-sec-ey">DIFFERENTIATION</span>
+      <h2>Two Engineering Innovations That <span>Redefine Hole Drilling</span></h2>
+      <p>Both-side simultaneous drilling and a horizontal architecture lift quality, machinability, and throughput at the same time.</p>
+    </div>
+
+    <div class="dd-diff__row" data-snt-reveal>
+      <div class="dd-diff__rowhead">
+        <span class="num">01</span>
+        <div>
+          <h3 class="ti">Both-Side Simultaneous Drilling</h3>
+          <p class="desc">Eliminates the workpiece-flip step — the largest source of concentricity error in conventional drilling.</p>
+        </div>
+      </div>
+      <div class="dd-diff__pair">
+        <div class="dd-diff__col dd-diff__col--bef">
+          <span class="dd-diff__lbl">BEFORE</span>
+          <h4 class="dd-diff__sub">Single-Direction Type</h4>
+          <ul class="dd-diff__list">
+            <li>Drill one face, then <b>flip and re-fixture</b> for a 2-step process</li>
+            <li>Pitch error and <b>concentricity defects</b> introduced during the flip</li>
+            <li>Total cycle time grows; operator intervention raises labor cost</li>
+            <li>Alignment error reduces yield</li>
+          </ul>
+        </div>
+        <div class="dd-diff__arrow">→</div>
+        <div class="dd-diff__col dd-diff__col--aft">
+          <span class="dd-diff__lbl">AFTER</span>
+          <h4 class="dd-diff__sub">Both-Side Type</h4>
+          <ul class="dd-diff__list">
+            <li>Two spindles drill <b>simultaneously from both faces</b> — no flip required</li>
+            <li>Concentricity held within <b>20㎛</b> at all times</li>
+            <li>Hole quality preserved even when machine pitch error occurs</li>
+            <li>Longer unattended runs — <b>higher yield, more output</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dd-diff__row" data-snt-reveal>
+      <div class="dd-diff__rowhead">
+        <span class="num">02</span>
+        <div>
+          <h3 class="ti">Horizontal Machining Structure</h3>
+          <p class="desc">A horizontal hole axis lets chips evacuate naturally — the key enabler for true deep-hole drilling.</p>
+        </div>
+      </div>
+      <div class="dd-diff__pair">
+        <div class="dd-diff__col dd-diff__col--bef">
+          <span class="dd-diff__lbl">BEFORE</span>
+          <h4 class="dd-diff__sub">Vertical Type</h4>
+          <ul class="dd-diff__list">
+            <li>Gravity packs swarf <b>inside the hole</b></li>
+            <li>Reduced coolant flow — risk of drill breakage</li>
+            <li>Hard ceiling on deep-hole capability</li>
+          </ul>
+        </div>
+        <div class="dd-diff__arrow">→</div>
+        <div class="dd-diff__col dd-diff__col--aft">
+          <span class="dd-diff__lbl">AFTER</span>
+          <h4 class="dd-diff__sub">Horizontal Type</h4>
+          <ul class="dd-diff__list">
+            <li>Chips <b>evacuate horizontally</b> by gravity — drill protected</li>
+            <li><b>1.5–2× throughput</b> at identical cutting conditions</li>
+            <li><b>2–3× throughput</b> with optimized recipe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 1.7: Core Value (3 metrics) ══ -->
+<section class="dd-core dd">
+  <div class="dd-core__inner">
+    <div class="dd-core__head" data-snt-reveal>
+      <span class="dd-sec-ey">CORE VALUE</span>
+      <h2>Three Measurable Outcomes <span>From One Patent</span></h2>
+      <p>Both-side simultaneous drilling and the horizontal structure are protected by Saehan Nanotech's patent — translating directly into quality, machinability, and productivity gains.</p>
+    </div>
+
+    <div class="dd-core__grid">
+      <div class="dd-core__card" data-snt-reveal>
+        <div class="dd-core__num">01 / QUALITY</div>
+        <div class="dd-core__big"><span class="v" data-counter="20">0</span><span class="u">㎛</span></div>
+        <div class="dd-core__lbl">Hole-to-hole concentricity</div>
+        <div class="dd-core__name">Quality</div>
+        <div class="dd-core__sname">PRECISION</div>
+        <ul class="dd-core__bullets">
+          <li>Concentricity held <b>within 20㎛</b> across the workpiece</li>
+          <li>Workpiece flip step removed — error source <b>eliminated at root</b></li>
+          <li>Hole quality preserved even under machine pitch error</li>
+        </ul>
+      </div>
+
+      <div class="dd-core__card" data-snt-reveal>
+        <div class="dd-core__num">02 / MACHINABILITY</div>
+        <div class="dd-core__big"><span class="v" data-counter="30">0</span><span class="u">L/D</span></div>
+        <div class="dd-core__lbl">Maximum aspect ratio</div>
+        <div class="dd-core__name">Machinability</div>
+        <div class="dd-core__sname">DEEP-HOLE</div>
+        <ul class="dd-core__bullets">
+          <li>Dedicated <b>deep-hole drilling</b> design — Ø0.35 mm and up validated</li>
+          <li>Hole-life testing completed across drill diameters — reliability proven</li>
+          <li>Aspect ratio <b>L/D up to 30</b> tested in production</li>
+        </ul>
+      </div>
+
+      <div class="dd-core__card" data-snt-reveal>
+        <div class="dd-core__num">03 / PRODUCTIVITY</div>
+        <div class="dd-core__big"><span class="v" data-counter="3">0</span><span class="u">×</span></div>
+        <div class="dd-core__lbl">Throughput vs. vertical type (optimized)</div>
+        <div class="dd-core__name">Productivity</div>
+        <div class="dd-core__sname">THROUGHPUT</div>
+        <ul class="dd-core__bullets">
+          <li><b>1.5–2×</b> throughput at identical cutting conditions</li>
+          <li><b>2–3×</b> throughput with optimized horizontal-concept recipe</li>
+          <li>Longer unattended runtime — <b>direct labor-cost reduction</b></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -249,6 +459,79 @@
 </section>
 <style>@media(max-width:640px){[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;max-width:400px!important;}}</style>
 
+<!-- ══ SECTION 6.5: Application ══ -->
+<section class="dd-app dd">
+  <div class="dd-app__inner">
+    <div class="dd-app__head" data-snt-reveal>
+      <span class="dd-sec-ey">APPLICATION</span>
+      <h2>Which Semiconductor Components <span>Require Hole Drilling?</span></h2>
+      <p>Consumable parts in dry-etch, CVD, and ALD chambers carry hundreds to thousands of precision holes. ANT-BSSD500 is engineered for exactly this micro-hole work.</p>
+    </div>
+
+    <div class="dd-app__grid">
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">CORE</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="7" cy="12" r="1.1" fill="currentColor"/><circle cx="17" cy="12" r="1.1" fill="currentColor"/><circle cx="12" cy="7" r="1.1" fill="currentColor"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/></svg>
+        </div>
+        <h3 class="dd-app__name">Silicon Electrode</h3>
+        <div class="dd-app__en">SILICON ELECTRODE</div>
+        <p class="dd-app__desc">Plasma-generation electrode in dry-etch chambers. Hundreds to thousands of through-holes machined from both faces.</p>
+      </article>
+
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">CORE</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="3" rx="1"/><path d="M6 9v9M10 9v9M14 9v9M18 9v9"/><path d="M5 19h14"/></svg>
+        </div>
+        <h3 class="dd-app__name">Shower Head</h3>
+        <div class="dd-app__en">SHOWER HEAD</div>
+        <p class="dd-app__desc">CVD/ALD chamber gas-distribution component. Requires high-precision hole arrays for uniform flow.</p>
+      </article>
+
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">SiC</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>
+        </div>
+        <h3 class="dd-app__name">Focus Ring</h3>
+        <div class="dd-app__en">FOCUS RING</div>
+        <p class="dd-app__desc">Wafer-edge protection in etch processes. SiC-material assembly and pin-hole precision machining.</p>
+      </article>
+
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">SiC · AlN</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="10" rx="1"/><circle cx="8" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="16" cy="12" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3 class="dd-app__name">Susceptor</h3>
+        <div class="dd-app__en">SUSCEPTOR</div>
+        <p class="dd-app__desc">Wafer support and heating component. Vacuum holes, lift-pin holes, and additional patterns machined per layout.</p>
+      </article>
+
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">AlN</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="6.5" cy="9" r=".7" fill="currentColor"/><circle cx="9.5" cy="6.5" r=".7" fill="currentColor"/><circle cx="14.5" cy="6.5" r=".7" fill="currentColor"/><circle cx="17.5" cy="9" r=".7" fill="currentColor"/><circle cx="6.5" cy="15" r=".7" fill="currentColor"/><circle cx="9.5" cy="17.5" r=".7" fill="currentColor"/><circle cx="14.5" cy="17.5" r=".7" fill="currentColor"/><circle cx="17.5" cy="15" r=".7" fill="currentColor"/><circle cx="12" cy="12" r=".7" fill="currentColor"/></svg>
+        </div>
+        <h3 class="dd-app__name">Wafer Chuck / ESC</h3>
+        <div class="dd-app__en">WAFER CHUCK · ESC</div>
+        <p class="dd-app__desc">Vacuum-clamping fixtures with thousands of micro vacuum holes. AlN and SiC ultra-precision hole drilling.</p>
+      </article>
+
+      <article class="dd-app__card" data-snt-reveal>
+        <span class="dd-app__tag">BRITTLE</span>
+        <div class="dd-app__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="dd-app__name">Quartz Ring / Parts</h3>
+        <div class="dd-app__en">QUARTZ RING / PARTS</div>
+        <p class="dd-app__desc">Fused-silica components for high-temperature processes. Assembly holes and sensor holes precision-machined.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ══ SECTION 7: Specs Table ══ -->
 <section class="dd-tbl dd" style="background:#fff;">
   <div class="dd-tbl__inner" data-snt-reveal>
@@ -256,15 +539,40 @@
     <h2 class="dd-sec-ti">Technical <span style="color:#0068b7;">Specs</span></h2>
     <p style="font-size:13px;color:#6a7589;margin-bottom:8px;">Korean Patent No. 10-1579164. Standard specifications — custom design available.</p>
     <div style="overflow-x:auto;">
-      <table class="dd-table">
-        <tr><th>Stroke (X,Y,Z1,Z2)</th><td>480×480×140×140 mm</td></tr>
-        <tr><th>Work Size</th><td>Max Ø400 mm, Max t 20.0 mm</td></tr>
-        <tr><th>Spindle (FISCHER)</th><td>4,000~25,000 RPM · HSK-E25 · 1kW</td></tr>
-        <tr><th>Drill Range (PCD)</th><td>Min Ø0.30 ~ Max Ø3.0 mm</td></tr>
-        <tr><th>Controller</th><td>FANUC-OiMF-PLUS</td></tr>
-        <tr><th>Coolant</th><td>Tank 220ℓ · Spindle Coolant 2,500 kcal</td></tr>
-        <tr><th>Machine Size</th><td>1,900×2,900×2,700 mm · 6,200 kg</td></tr>
-        <tr><th>Utility</th><td>220V±10V · Air 5±0.5 bar · 22~26°C</td></tr>
+      <table class="dd-table-grouped">
+        <tr class="cat"><td colspan="2">Machine Capacity</td></tr>
+        <tr class="row"><th>Max Stroke (X, Y, Z1, Z2 Axis)</th><td>480 × 480 × 140 × 140 mm</td></tr>
+        <tr class="row"><th>Max Speed — X, Y Axis</th><td>6 m/min</td></tr>
+        <tr class="row"><th>Max Speed — Z1, Z2 Axis</th><td>8 m/min</td></tr>
+        <tr class="row"><th>Work Size</th><td>Max Ø400 mm,  Max t 20.0 mm</td></tr>
+
+        <tr class="cat"><td colspan="2">Feed Unit</td></tr>
+        <tr class="row"><th>Z1, Z2 Axis Motor</th><td>1.4 kW AC Servo Motor</td></tr>
+        <tr class="row"><th>X, Y Axis Motor</th><td>2 kW AC Servo Motor (Brake)</td></tr>
+
+        <tr class="cat"><td colspan="2">Spindle Unit (FISCHER, Germany)</td></tr>
+        <tr class="row"><th>R.P.M.</th><td>4,000 ~ 25,000 RPM</td></tr>
+        <tr class="row"><th>Tool Holder</th><td>HSK-E25</td></tr>
+        <tr class="row"><th>Output Power</th><td>1 kW</td></tr>
+        <tr class="row"><th>Drill Diameter Range (PCD)</th><td>Min Ø0.30 mm ~ Max Ø3.0 mm</td></tr>
+        <tr class="row"><th>Tool Change</th><td>Shank — Manual Change</td></tr>
+
+        <tr class="cat"><td colspan="2">Coolant</td></tr>
+        <tr class="row"><th>Tank · Pump</th><td>220 ℓ,  30 ℓ/min</td></tr>
+        <tr class="row"><th>Spindle Coolant Unit</th><td>2,500 kcal</td></tr>
+
+        <tr class="cat"><td colspan="2">Controller</td></tr>
+        <tr class="row"><th>CNC Controller</th><td>FANUC-OiMF-PLUS</td></tr>
+
+        <tr class="cat"><td colspan="2">Utility</td></tr>
+        <tr class="row"><th>Main Power</th><td>220 V ± 10 V</td></tr>
+        <tr class="row"><th>Air (Dry Clean Air)</th><td>5 ± 0.5 bar,  120 ℓ/min</td></tr>
+        <tr class="row"><th>Room Temperature</th><td>22 ~ 26 °C / Humidity ≤ 60%</td></tr>
+
+        <tr class="cat"><td colspan="2">Footprint</td></tr>
+        <tr class="row"><th>Machine Size (W × L × H)</th><td>1,900 × 2,900 × 2,700 mm</td></tr>
+        <tr class="row"><th>Installation Space</th><td>3,200 × 4,200 × 3,000 mm</td></tr>
+        <tr class="row"><th>Weight</th><td>6,200 kg</td></tr>
       </table>
     </div>
   </div>
@@ -310,7 +618,7 @@
   </div>
 </div>
 </footer>
-<script src="assets/js/main.js?v=20260431"></script>
+<script src="assets/js/main.js?v=20260433"></script>
 <script>var _y=document.getElementById('snt-yr');if(_y)_y.textContent=new Date().getFullYear();</script>
 </body>
 </html>
