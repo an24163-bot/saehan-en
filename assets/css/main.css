@@ -348,3 +348,19 @@ a { text-decoration: none; color: inherit; }
 
 .snt-scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:9999;background:linear-gradient(90deg,#5ba3ff 0%,#004ea1 50%,#0f1a33 100%);transform:scaleX(0);transform-origin:0 50%;transition:transform .12s linear;pointer-events:none;}
 @media(prefers-reduced-motion:reduce){.snt-scroll-progress{transition:none;}}
+
+/* ── Product page hero image standardization (uniform 4:3 frame across 7 pages; nano-imprinting keeps its custom composite layout) ── */
+.mh__photo,.dd-hero__photo{aspect-ratio:4/3;background:#f5f7fb;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 56px -20px rgba(15,26,51,.2);max-height:520px;width:100%;}
+.mh__photo .mh__img,.mh__photo img,.dd-hero__photo img{width:100%;height:100%;object-fit:contain;padding:clamp(12px,1.4vw,20px);box-shadow:none!important;border-radius:0!important;background:transparent;}
+.mp-hero__img{max-height:380px;width:100%;object-fit:contain;background:#f5f7fb;border-radius:12px;padding:8px;}
+@media(max-width:860px){.mh__photo,.dd-hero__photo{max-height:380px;}}
+
+
+/* Grouped spec table — used on grinding-center / core-drilling / polishing / nano-imprinting */
+table.snt-tbl-grouped{width:100%;min-width:520px;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e6e9f0;}
+table.snt-tbl-grouped tr.cat td{background:#0f1a33;color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.18em;padding:11px 20px;text-transform:uppercase;}
+table.snt-tbl-grouped th{text-align:left;padding:13px 20px;font-size:13px;font-weight:700;color:#0f1a33;background:#f8f9fc;width:240px;border-bottom:1px solid #e6e9f0;border-right:1px solid #e6e9f0;}
+table.snt-tbl-grouped td{padding:13px 20px;font-size:13.5px;color:#6a7589;border-bottom:1px solid #e6e9f0;}
+table.snt-tbl-grouped tr:not(.cat):hover{background:#f7faff;}
+table.snt-tbl-grouped tr:not(.cat):hover th{background:#eef4fb;}
+@media(max-width:560px){table.snt-tbl-grouped th{width:46%;font-size:12px;padding:10px 12px;}table.snt-tbl-grouped td{font-size:12px;padding:10px 12px;}}
