@@ -36,4 +36,68 @@
       entries.forEach(function(e){
         if(e.isIntersecting){
           e.target.classList.add('is-visible');
-          io.un
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealTargets.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Scroll progress bar */
+  (function(){
+    var bar = document.createElement('div');
+    bar.className = 'snt-scroll-progress';
+    document.body.appendChild(bar);
+    var ticking = false;
+    function update(){
+      var doc = document.documentElement;
+      var max = (doc.scrollHeight - doc.clientHeight) || 1;
+      var pct = Math.max(0, Math.min(1, (window.scrollY || window.pageYOffset || 0) / max));
+      bar.style.transform = 'scaleX(' + pct + ')';
+      ticking = false;
+    }
+    function onScroll(){
+      if(!ticking){ window.requestAnimationFrame(update); ticking = true; }
+    }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  })();
+
+  /* Number counter animation (data-counter="N") */
+  (function(){
+    var els = document.querySelectorAll('[data-counter]');
+    if(!els.length) return;
+
+    function animate(el){
+      var target = parseInt(el.getAttribute('data-counter'), 10) || 0;
+      if(prefersReducedMotion){ el.textContent = target; return; }
+      var duration = 1400;
+      var start = null;
+      function step(ts){
+        if(start === null) start = ts;
+        var p = Math.min(1, (ts - start) / duration);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.round(target * eased);
+        el.textContent = val;
+        if(p < 1) window.requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      window.requestAnimationFrame(step);
+    }
+
+    if(!hasIO){
+      els.forEach(animate);
+      return;
+    }
+    var ioCounter = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          animate(e.target);
+          ioCounter.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    els.forEach(function(el){ ioCounter.observe(el); });
+  })();
+})();
