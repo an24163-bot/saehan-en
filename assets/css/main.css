@@ -324,7 +324,7 @@ a { text-decoration: none; color: inherit; }
 /* ── Footer Clean ── */
 .snt-ft-clean{padding:clamp(40px,5vw,60px) clamp(20px,4vw,48px);max-width:1280px;margin:0 auto;}
 .snt-ft-clean__top{margin-bottom:clamp(20px,2.5vw,28px);}
-.snt-ft-clean__logo{height:clamp(32px,4vw,42px);width:auto;opacity:.85;}
+.snt-ft-clean__logo{height:clamp(32px,4vw,42px);width:auto;opacity:.92;filter:brightness(0) invert(1);}
 .snt-ft-clean__info{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px;}
 .snt-ft-clean__info a{color:rgba(255,255,255,.6);text-decoration:none;}
 .snt-ft-clean__info a:hover{color:#fff;}
@@ -351,5 +351,4 @@ a { text-decoration: none; color: inherit; }
 .snt-pb{position:relative;min-height:300px;display:flex;align-items:flex-end;background-size:cover;background-position:center;padding:0 clamp(20px,4vw,48px) clamp(44px,5vw,68px);font-family:"Pretendard","Noto Sans KR",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}.snt-pb__overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,20,50,.3) 0%,rgba(10,20,50,.75) 100%);}.snt-pb__inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;}.snt-pb__eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.68);margin-bottom:10px;}.snt-pb__title{font-size:clamp(26px,3.8vw,50px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px;}.snt-pb__sub{font-size:clamp(13px,1.3vw,15px);color:rgba(255,255,255,.72);line-height:1.7;max-width:640px;}
 
 /* ========================================================================
-   Bottom CTA (snt-cta-bottom) — used by content pages above the footer
-   Canonica
+   Bottom CTA (snt-cta-bottom) — used by content pag
