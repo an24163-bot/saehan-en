@@ -376,7 +376,7 @@ table.snt-tbl-grouped tr:not(.cat):hover th{background:#eef4fb;}
 .snt-nav__lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:200px;background:#fff;border:1px solid var(--snt-line);border-radius:12px;box-shadow:0 16px 40px -16px rgba(15,26,51,.18),0 0 0 1px rgba(15,26,51,.04);padding:6px;display:none;z-index:200;}
 .snt-nav__lang-picker.is-open .snt-nav__lang-menu{display:block;animation:lang-fade .18s ease-out;}
 @keyframes lang-fade{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
-.snt-nav__lang-item{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--snt-navy);transition:background .15s;cursor:pointer;}
+.snt-nav__lang-item{display:flex;align-items:center;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--snt-navy);transition:background .15s;cursor:pointer;}
 .snt-nav__lang-item:hover{background:#f5f7fb;}
 .snt-nav__lang-item--active{background:#e8f1f8;}
 .snt-nav__lang-item--active .snt-nav__lang-name{color:var(--snt-blue);}
@@ -389,7 +389,7 @@ table.snt-tbl-grouped tr:not(.cat):hover th{background:#eef4fb;}
 .snt-mobile-lang__label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--snt-muted);text-transform:uppercase;margin-bottom:8px;padding:0 12px;}
 .snt-mobile-lang__label svg{width:14px;height:14px;}
 .snt-mobile-lang__items{display:flex;flex-direction:column;gap:2px;}
-.snt-mobile-lang__item{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--snt-navy);}
+.snt-mobile-lang__item{display:flex;align-items:center;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--snt-navy);}
 .snt-mobile-lang__item:hover{background:#f5f7fb;}
 .snt-mobile-lang__item--active{background:#e8f1f8;}
 .snt-mobile-lang__item--active .snt-mobile-lang__name{color:var(--snt-blue);}
