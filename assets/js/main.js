@@ -100,4 +100,44 @@
     }, { threshold: 0.5 });
     els.forEach(function(el){ ioCounter.observe(el); });
   })();
+
+  /* Language picker dropdown */
+  (function(){
+    var pickers = document.querySelectorAll('.snt-nav__lang-picker');
+    pickers.forEach(function(p){
+      var btn = p.querySelector('.snt-nav__lang-btn');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var willOpen = !p.classList.contains('is-open');
+        // Close all other pickers
+        pickers.forEach(function(x){ x.classList.remove('is-open'); });
+        if(willOpen){
+          p.classList.add('is-open');
+          btn.setAttribute('aria-expanded','true');
+        } else {
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      pickers.forEach(function(p){
+        if(!p.contains(e.target)){
+          p.classList.remove('is-open');
+          var b = p.querySelector('.snt-nav__lang-btn');
+          if(b) b.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        pickers.forEach(function(p){
+          p.classList.remove('is-open');
+          var b = p.querySelector('.snt-nav__lang-btn');
+          if(b) b.setAttribute('aria-expanded','false');
+        });
+      }
+    });
+  })();
+
 })();
