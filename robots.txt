@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
 
 Sitemap: https://en.saehannanotech.com/sitemap.xml
+
+# IndexNow key
+IndexNow: 5d6c70cfd60129ff5d93000b96505422
